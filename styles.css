@@ -365,3 +365,122 @@ a { color: inherit; text-decoration: none; }
 }
 
 :focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; border-radius: 3px; }
+
+/* ============================================================
+   V2 SECTIONS
+   ============================================================ */
+
+/* ---------- Operator experience strip ---------- */
+.expstrip { border-block: 1px solid var(--line); padding-block: 1.4rem; }
+.expstrip-inner { display: flex; align-items: center; gap: 1.5rem 2rem; flex-wrap: wrap; }
+.expstrip-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.expstrip-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.9rem 2rem; margin: 0; padding: 0; }
+.expstrip-list li { font-weight: 500; font-size: 0.98rem; letter-spacing: -0.01em; color: var(--navy); opacity: 0.85; }
+
+/* ---------- Philosophy ---------- */
+.philosophy { padding-block: var(--section-y); }
+.philosophy .section-head h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+.system-grid {
+  list-style: none; margin: clamp(2.5rem, 5vw, 3.5rem) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+}
+.system-grid li {
+  padding: 1.5rem 1rem; border-right: 1px solid var(--line);
+  font-weight: 500; font-size: 1.02rem; letter-spacing: -0.01em; color: var(--navy);
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+.system-grid li:last-child { border-right: none; }
+.sys-no { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; color: var(--orange); }
+.philosophy-kicker {
+  margin-top: clamp(2rem, 4vw, 2.6rem); font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 500; letter-spacing: -0.02em; color: var(--navy); max-width: 34ch;
+}
+@media (max-width: 860px) {
+  .system-grid { grid-template-columns: repeat(2, 1fr); }
+  .system-grid li { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .system-grid li:nth-child(2n) { border-right: none; }
+  .system-grid li:nth-last-child(-n+1) { border-bottom: none; }
+}
+@media (max-width: 420px) {
+  .system-grid { grid-template-columns: 1fr; }
+  .system-grid li { border-right: none; }
+}
+
+/* ---------- Statement band ---------- */
+.band { background: var(--navy); color: var(--paper); padding-block: clamp(4rem, 9vw, 7rem); }
+.band-quote {
+  font-size: clamp(1.8rem, 4.4vw, 3.4rem); font-weight: 500; letter-spacing: -0.03em;
+  line-height: 1.12; text-align: center; max-width: 20ch; margin-inline: auto;
+}
+
+/* ---------- Proof (v2 uses section-head) ---------- */
+.proof { padding-block: var(--section-y); border-block: none; }
+.proof .section-head { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+/* ---------- AI positioning (dark) ---------- */
+.ai { background: var(--navy); color: var(--paper); padding-block: var(--section-y); }
+.ai-inner { display: grid; grid-template-columns: 1.55fr 0.9fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.ai h2 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); color: var(--paper); }
+.ai-lead { margin-top: 1.4rem; color: rgba(250,249,245,0.74); font-size: 1.06rem; line-height: 1.65; }
+.ai-list { list-style: none; margin: 0; padding: 0; align-self: center; }
+.ai-list li {
+  font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.02em; color: var(--paper);
+  padding: 1.05rem 0; border-top: 1px solid rgba(250,249,245,0.16);
+}
+.ai-list li:last-child { border-bottom: 1px solid rgba(250,249,245,0.16); }
+@media (max-width: 860px) { .ai-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* ---------- Work / case studies ---------- */
+.work { padding-block: var(--section-y); }
+.cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.case { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: 1.15rem; transition: transform .22s ease, box-shadow .22s ease; }
+.case:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(17,32,46,.4); }
+.case-tag { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); padding-bottom: 1.1rem; border-bottom: 1px solid var(--line); }
+.case-row { display: flex; flex-direction: column; gap: 0.35rem; }
+.case-row span { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.case-row p { font-size: 0.92rem; color: var(--navy); line-height: 1.5; }
+@media (max-width: 900px) { .cases { grid-template-columns: 1fr; } }
+
+/* ---------- Founder ---------- */
+.founder { padding-block: var(--section-y); border-top: 1px solid var(--line); }
+.founder-inner { display: grid; grid-template-columns: 1.5fr 0.9fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.founder h2 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); }
+.founder-lead { margin-top: 1.4rem; color: var(--muted); font-size: 1.06rem; line-height: 1.65; }
+.founder-domains { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-self: center; }
+.founder-domains li { font-size: 0.9rem; color: var(--navy); padding: 0.85rem 0; border-top: 1px solid var(--line); }
+@media (max-width: 860px) { .founder-inner { grid-template-columns: 1fr; gap: 1.8rem; } }
+
+/* ---------- FAQ ---------- */
+.faq { padding-block: var(--section-y); }
+.faq-list { max-width: 820px; border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  list-style: none; cursor: pointer; padding: 1.5rem 0; display: flex; align-items: center;
+  justify-content: space-between; gap: 1.5rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem); font-weight: 500; letter-spacing: -0.01em; color: var(--navy);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-mark { position: relative; flex: 0 0 auto; width: 16px; height: 16px; }
+.faq-mark::before, .faq-mark::after { content: ""; position: absolute; background: var(--orange); border-radius: 2px; transition: transform .22s ease, opacity .22s ease; }
+.faq-mark::before { top: 7px; left: 0; width: 16px; height: 1.6px; }
+.faq-mark::after { left: 7px; top: 0; width: 1.6px; height: 16px; }
+.faq-item[open] .faq-mark::after { transform: rotate(90deg); opacity: 0; }
+.faq-item[open] summary { color: var(--orange); }
+.faq-item p { margin: 0 0 1.6rem; max-width: 68ch; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+
+
+/* ---------- Strong opinions / beliefs ---------- */
+.beliefs { padding-block: var(--section-y); border-top: 1px solid var(--line); }
+.belief-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); counter-reset: belief; }
+.belief-list li {
+  display: flex; gap: clamp(1rem, 3vw, 2rem); align-items: center;
+  padding: clamp(1.4rem, 3.2vw, 2.1rem) 0; border-bottom: 1px solid var(--line);
+  font-size: clamp(1.3rem, 3vw, 2.1rem); font-weight: 500; letter-spacing: -0.02em;
+  color: var(--navy); line-height: 1.15;
+}
+.belief-list li::before {
+  counter-increment: belief; content: counter(belief, decimal-leading-zero);
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 400; letter-spacing: 0.05em;
+  color: var(--orange); flex: 0 0 auto;
+}

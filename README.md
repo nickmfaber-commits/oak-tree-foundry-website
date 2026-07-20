@@ -77,7 +77,8 @@ target. HTTPS is automatic.
 ## Editing the content
 
 Everything reads top-to-bottom in `index.html` in the same order it appears on the page:
-Nav → Hero → Proof stats → Thesis → The Ladder → Engagement → Why → Start (CTA) → Footer.
+Nav → Hero → Operator strip → The problem → Philosophy → Statement band → Proof → The Ladder →
+AI positioning → Selected work → Operator (founder) → Why us → FAQ → Assessment (CTA) → Footer.
 Change copy directly in the markup. The contact address (`nick@oaktreefoundry.com`) appears
 in the Start section — swap it wherever you land on a real inbox.
 
