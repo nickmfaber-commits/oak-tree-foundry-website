@@ -15,6 +15,35 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Mobile nav drawer
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  function closeMenu() {
+    nav.classList.remove("open");
+    if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.setAttribute("aria-label", "Open menu"); }
+  }
+  function openMenu() {
+    nav.classList.add("open");
+    if (toggle) { toggle.setAttribute("aria-expanded", "true"); toggle.setAttribute("aria-label", "Close menu"); }
+  }
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      nav.classList.contains("open") ? closeMenu() : openMenu();
+    });
+    // Close after tapping any link in the drawer
+    links.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", closeMenu);
+    });
+    // Escape closes
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
+    });
+    // Reset when leaving mobile width
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 820) closeMenu();
+    });
+  }
+
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Reveal on scroll

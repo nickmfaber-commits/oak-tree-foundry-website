@@ -78,8 +78,8 @@ target. HTTPS is automatic.
 
 Everything reads top-to-bottom in `index.html` in the same order it appears on the page:
 Nav → Hero → Proof stats → Thesis → The Ladder → Engagement → Why → Start (CTA) → Footer.
-Change copy directly in the markup. The contact address (`hello@oaktreeadvisors.com`) appears
-in the Start section and footer — swap it wherever you land on a real inbox.
+Change copy directly in the markup. The contact address (`nick@oaktreefoundry.com`) appears
+in the Start section — swap it wherever you land on a real inbox.
 
 ## Notes
 

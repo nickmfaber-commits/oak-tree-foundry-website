@@ -32,7 +32,10 @@
           <span class="brand-tag">Commercial Operating Partners</span>
         </span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#thesis">Approach</a>
         <a href="#ladder">The Ladder</a>
         <a href="#engagement">Engagement</a>
@@ -47,26 +50,21 @@
     <!-- ================= HERO ================= -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow reveal">Commercial Operating Partners &middot; Series&nbsp;A–B Software</p>
+        <p class="eyebrow reveal">Commercial Operating Partners</p>
         <h1 class="hero-title reveal">
           You engineered the product.<br />
           Now engineer the <span class="accent">revenue</span>.
         </h1>
         <p class="hero-sub reveal">
-          Growth-stage software companies preparing their next raise face a commercial test:
-          longer sales cycles, committee buying, and investors who expect a forecast they can
-          underwrite. Most startups build the sales team before the sales system — then wonder
-          why neither works. The revenue engine deserves the same rigor as the product: pipeline,
-          pricing, forecasting, and partnerships designed with intent, not assembled under pressure.
-          We build it, run it, and scale it with you — so every commercial hire walks into a system
-          built to make them succeed.
+          Most startups build the sales team before the sales system. We build the system
+          first — pipeline, pricing, forecasting, partnerships — then scale it with you.
         </p>
         <div class="hero-cta reveal">
           <a class="btn btn-solid" href="#start">Start with a diagnostic <span class="arrow">→</span></a>
           <a class="btn btn-ghost" href="#engagement">See how we engage</a>
         </div>
         <p class="hero-note reveal">
-          Entry point: Sales Operations as a Service. &nbsp;Destination: Commercial Operating Partner.
+          Entry point: CRO as a Service. &nbsp;Destination: Commercial Operating Partner.
         </p>
       </div>
     </section>
@@ -101,13 +99,15 @@
     <!-- ================= THESIS ================= -->
     <section class="thesis" id="thesis">
       <div class="container thesis-inner">
-        <p class="eyebrow reveal">The diagnosis</p>
-        <h2 class="reveal">Most companies know they have a revenue problem. Almost all of them misdiagnose it.</h2>
+        <p class="eyebrow reveal">The problem</p>
+        <h2 class="reveal">The product gets engineered.<br />The revenue engine gets improvised.</h2>
         <p class="lead reveal">
-          The instinct is to blame the CRM, the tooling, the process. The real constraint sits
-          upstream — in pricing, packaging, pipeline design, forecasting, retention, and the
-          governance that holds them together. We sit between the strategy firms that diagnose and
-          leave and the RevOps shops that execute without commercial fluency: we find the commercial
+          When growth stalls or margins slip, the instinct is to blame the tooling — the CRM, the
+          dashboards, the process. The real constraint almost always sits upstream: in pricing,
+          packaging, pipeline design, forecasting, and the governance that holds them together.
+          Those get treated as things you figure out later, once there's a team to run them. We
+          treat them as the engine itself — sitting between the strategy firms that diagnose and
+          leave and the RevOps shops that execute without commercial fluency. We find the commercial
           problem underneath, then stay and operate the engine we design.
         </p>
       </div>
@@ -143,16 +143,17 @@
                 <p class="rung-kicker">Operational Stability</p>
               </div>
             </header>
-            <p class="rung-name">Sales Operations as a Service</p>
-            <p class="rung-target">Founder-led SaaS, $1M–$10M ARR, Series A, no dedicated RevOps leader — CRM and process beginning to break under growth.</p>
+            <p class="rung-name">CRO as a Service</p>
+            <p class="rung-target">Founder-led software companies without a revenue leader — where the founder still owns sales and the commercial system was never actually built.</p>
             <ul class="rung-list">
-              <li>CRM architecture &amp; administration</li>
-              <li>Pipeline, routing &amp; territory design</li>
-              <li>Reporting, dashboards &amp; forecasting</li>
-              <li>Data hygiene &amp; sales-process design</li>
-              <li>Weekly pipeline reviews &amp; enablement</li>
+              <li>ICP definition &amp; targeting — who to sell to, and why</li>
+              <li>Pipeline, routing &amp; forecasting you can trust</li>
+              <li>Pricing and deal discipline from day one</li>
+              <li>CRM and sales process architected right — not just administered</li>
+              <li>Weekly pipeline &amp; operating cadence</li>
+              <li>The revenue system built before your first sales hire</li>
             </ul>
-            <p class="rung-outcome"><span>Outcome</span> A scalable, predictable revenue operating system that supports growth.</p>
+            <p class="rung-outcome"><span>Outcome</span> A revenue engine a founder can run on — and a CRO's judgment without the full-time hire.</p>
           </article>
 
           <article class="rung reveal" data-level="II">
@@ -163,15 +164,16 @@
                 <p class="rung-kicker">Commercial Discipline</p>
               </div>
             </header>
-            <p class="rung-name">Sales Ops + Deal Desk</p>
-            <p class="rung-target">$5M–$25M ARR, growing sales org, rising deal complexity, multiple AEs, mounting pressure on pricing and approvals.</p>
+            <p class="rung-name">CRO as a Service + Deal Desk</p>
+            <p class="rung-target">A scaling sales org — multiple AEs, rising deal complexity, and mounting pressure on pricing and approvals.</p>
             <p class="rung-plus">Everything in Foundation, plus</p>
             <ul class="rung-list">
               <li>Deal desk &amp; commercial approvals</li>
               <li>Pricing &amp; discount governance</li>
               <li>Packaging &amp; renewal strategy</li>
+              <li>Comp plan &amp; quota design</li>
               <li>Contract review &amp; commercial policy</li>
-              <li>Forecast governance &amp; comp support</li>
+              <li>Forecast governance &amp; territory design</li>
             </ul>
             <p class="rung-outcome"><span>Outcome</span> Larger deals, faster cycles, and better margin protection.</p>
           </article>
@@ -188,11 +190,12 @@
             <p class="rung-target">Series B+, PE-backed, preparing for scale, a raise, or an exit — pursuing full commercial transformation.</p>
             <p class="rung-plus">Everything in Growth, plus</p>
             <ul class="rung-list">
-              <li>Pricing, packaging &amp; monetization strategy</li>
+              <li><strong>Commercial Value Model &amp; ROI architecture</strong> — the ROI story your raise is underwritten on</li>
+              <li>Monetization strategy — transaction-, value- &amp; outcome-based</li>
+              <li>AI monetization &amp; packaging</li>
               <li>ICP, retention &amp; expansion strategy</li>
-              <li>Commercial governance &amp; KPI architecture</li>
-              <li>Board reporting &amp; operating cadence</li>
-              <li>Commercial diligence &amp; post-close integration</li>
+              <li>Commercial governance, KPI &amp; board cadence</li>
+              <li>Commercial diligence &amp; raise readiness</li>
             </ul>
             <p class="rung-outcome"><span>Outcome</span> Revenue growth, margin expansion, retention, and enterprise value.</p>
           </article>
@@ -255,7 +258,7 @@
           </article>
           <article class="why-card reveal">
             <h3>Fractional, not overhead.</h3>
-            <p>Commercial diligence runs seven figures for a one-time thesis. A full-time commercial leader is $400–600K loaded — for one company. We're embedded, productized, and accountable across a focused portfolio.</p>
+            <p>Commercial diligence runs seven figures for a one-time thesis. A full-time commercial leader is a high six-figure loaded cost — for one company. We're embedded, productized, and accountable across a focused portfolio.</p>
           </article>
         </div>
       </div>
@@ -268,12 +271,12 @@
         <p class="eyebrow eyebrow-light reveal">Start here</p>
         <h2 class="reveal">Start with a diagnostic.</h2>
         <p class="start-sub reveal">
-          Two weeks to a clear picture of your revenue operation — and a plan to fix it.
-          $3,500 flat, credited in full toward any retainer signed within 30 days.
+          Two weeks to a clear picture of your revenue operation — and a plan to fix it,
+          credited in full toward any retainer you start within 30 days.
         </p>
         <div class="start-cta reveal">
-          <a class="btn btn-accent" href="mailto:hello@oaktreeadvisors.com?subject=Diagnostic%20inquiry">Book a diagnostic <span class="arrow">→</span></a>
-          <a class="btn btn-outline-light" href="mailto:hello@oaktreeadvisors.com">hello@oaktreeadvisors.com</a>
+          <a class="btn btn-accent" href="mailto:nick@oaktreefoundry.com?subject=Diagnostic%20inquiry">Book a diagnostic <span class="arrow">→</span></a>
+          <a class="btn btn-outline-light" href="mailto:nick@oaktreefoundry.com">nick@oaktreefoundry.com</a>
         </div>
       </div>
     </section>
